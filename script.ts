@@ -29,7 +29,7 @@ interface Veiculo {
             row.innerHTML = `
             <td>${veiculo.nome}</td>
             <td>${veiculo.placa}</td>
-            <td>${veiculo.entrada}</td>
+            <td>${new Intl.DateTimeFormat('pt-BR').format(new Date(veiculo.entrada.toString()))}</td>
             <td>
                 <button class="delete" data-placa="${veiculo.placa}">X</button>
             </td>
